@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Features = () => {
+const Features = ({featureRef}) => {
   return (
-    <section className="features py-10" id="features">
+    <section className="features py-10" id="features" ref={featureRef}>
       <h1 className="heading text-3xl text-center font-bold mb-10">
         Our <span className="text-green-500">Features</span>
       </h1>
