@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 import UnauthorizedPage from './pages/UnauthorizedPage';
 import CartPage from './pages/CartPage';
 import ProtectedRoute from './components/ProtectedRoute';
-import AdminDashboard from './pages/admin/AdminDashBoard';
+import AdminDashboard from './pages/admin/AdminDashboard';
 import AddProduct from './pages/admin/AddProduct';
 import LoginPage from './pages/auth/LoginPage';
 import SignupPage from './pages/auth/SignupPage';
