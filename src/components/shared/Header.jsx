@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { ShoppingCart, Menu, Search, User, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -7,11 +7,14 @@ import LoginForm from '../HomeTest/LoginForm';
 import SearchComp from '../HomeTest/Search';
 import Cart from '../HomeTest/Cart';
 
-const Header = () => {
+const Header = ({featureRef,scrollToSection}) => {
   const [activeComponent, setActiveComponent] = useState('');
   const dispatch = useDispatch();
   
+  
   const user = useSelector((state) => state.auth.user); // Access the user from Redux state
+
+
 
   const toggleComponent = (component) => {
     if (activeComponent === component) {
@@ -40,7 +43,7 @@ const Header = () => {
           className={`navbar ${activeComponent === 'menu' ? 'block active z-20' : 'hidden'} md:flex md:space-x-6 absolute md:static w-full bg-white md:w-auto p-4 md:p-0`}
         >
           <Link className="link block p-4 md:p-0" to="/">Home</Link>
-          <Link className="link block p-4 md:p-0" to="#features">Features</Link>
+          <Link className="link block p-4 md:p-0" to="#features" onClick={()=>scrollToSection(featureRef)}>Features</Link>
           <Link className="link block p-4 md:p-0" to="/products">Products</Link>
           <Link className="link block p-4 md:p-0" to="#categories">Categories</Link>
           <Link className="link block p-4 md:p-0" to="#review">Review</Link>

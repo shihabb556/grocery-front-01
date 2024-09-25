@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root{
+
+:root {
     --green: green;
     --black: #342d71;
-    --light-color:#666;
+    --light-color: #666;
     --box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    --border: 2rem solid rgba(0,0,0,0.1);
-    --outline: .1rem solid rgba(0,0,0,0.1);
+    --border: 2rem solid rgba(0, 0, 0, 0.1);
+    --outline: .1rem solid rgba(0, 0, 0, 0.1);
 }
 
-*{
+* {
     font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -17,22 +18,23 @@
     text-decoration: none;
     transition: all .2s linear;
 }
-html{
+
+html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
 }
 
-body{
+body {
     background: #eee;
 }
 
-section{
+section {
     padding: 2rem 9%;
 }
 
-.btn{
+.btn {
     border: .2rem solid var(--black);
     margin-top: 1rem;
     display: inline-block;
@@ -44,12 +46,12 @@ section{
     background: none;
 }
 
-.btn:hover{
-    background: var(--green);
+.btn:hover {
+    background: #90ee90;
     color: #fff;
 }
 
-.heading{
+.heading {
     text-align: center;
     padding: 2rem 0;
     padding-bottom: 3rem;
@@ -59,7 +61,7 @@ section{
 }
 
 
-.heading span{
+.heading span {
     background: var(--green);
     color: white;
     display: inline-block;
@@ -68,7 +70,7 @@ section{
 }
 
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -81,23 +83,27 @@ section{
     background: #fff;
     box-shadow: var(--box-shadow);
 }
-.header .logo{
+
+.header .logo {
     font-size: 2.5rem;
     font-weight: bolder;
 }
-.header .logo .logoIcon{
+
+.header .logo .logoIcon {
     color: var(--green);
 }
-.header .navbar .link{
+
+.header .navbar .link {
     font-size: 1.7rem;
     margin: 0 1rem;
     color: var(--black);
 }
-.header .navbar .link:hover{
+
+.header .navbar .link:hover {
     color: var(--green);
 }
 
-.header .icons .icon{
+.header .icons .icon {
     border: 0px solid;
     width: 4.5rem;
     height: 4.5rem;
@@ -111,42 +117,51 @@ section{
     cursor: pointer;
 }
 
-.header .icons div:hover{
+.header .icons div:hover {
     background: var(--green);
     color: white;
 }
 
 
-.home{
-    border: 0px solid;
+.home {
     display: flex;
     justify-content: center;
-    background: url(image/banner-img.jpg) no-repeat;
+    background: url(image/bg6.png) no-repeat;
     background-position: center;
     background-size: cover;
     padding-block: 17rem 10rem;
 }
 
-.home .content{
-    border: 0px solid;
+
+
+.home .content {
     text-align: center;
     width: 60rem;
 }
 
-.home .content h3{
-    font-size: 2.5rem;
+.home .content h1 {
+    font-size: 40px;
+    font-weight: bold;
     color: var(--black);
+
 }
 
-.home .content h3 span{
+.home .content h1 span {
     color: var(--green);
 }
 
-.home .content p{
+.home .content p {
     color: var(--light-color);
     font-size: 1.5rem;
+    font-weight: bold;
     padding: 1rem 0;
+    margin-top: 20px;
 }
+
+.home .content a {
+    margin-top: 50px;
+}
+
 
 
 
@@ -165,7 +180,8 @@ section{
 
 .features .box-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 features per row for larger screens */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 features per row for larger screens */
     gap: 20px;
 }
 
@@ -201,14 +217,16 @@ section{
 /* For smaller tablets and larger phones */
 @media (max-width: 768px) {
     .box-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 features per row */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 features per row */
     }
 }
 
 /* For mobile screens */
 @media (max-width: 480px) {
     .box-container {
-        grid-template-columns: 1fr; /* 1 feature per row on small screens */
+        grid-template-columns: 1fr;
+        /* 1 feature per row on small screens */
     }
 }
 
@@ -232,7 +250,8 @@ section{
 /* Default for larger screens */
 .products-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 products per row */
     gap: 20px;
 }
 
@@ -292,21 +311,24 @@ section{
 /* For tablets */
 @media (max-width: 991px) {
     .products-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 products per row */
     }
 }
 
 /* For smaller tablets and larger phones */
 @media (max-width: 768px) {
     .products-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 products per row */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 products per row */
     }
 }
 
 /* For mobile screens */
 @media (max-width: 480px) {
     .products-container {
-        grid-template-columns: 1fr; /* 1 product per row on small screens */
+        grid-template-columns: 1fr;
+        /* 1 product per row on small screens */
     }
 }
 
@@ -327,7 +349,8 @@ section{
 
 .categories .box-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 categories per row for larger screens */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 categories per row for larger screens */
     gap: 20px;
 }
 
@@ -350,7 +373,8 @@ section{
 .categories .box-container .box img {
     margin: 1rem 0;
     height: 15rem;
-    object-fit: cover; /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Maintain aspect ratio */
 }
 
 .categories .box-container .box h3 {
@@ -374,14 +398,16 @@ section{
 /* For smaller tablets and larger phones */
 @media (max-width: 768px) {
     .categories .box-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 categories per row */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 categories per row */
     }
 }
 
 /* For mobile screens */
 @media (max-width: 480px) {
     .categories .box-container {
-        grid-template-columns: 1fr; /* 1 category per row on small screens */
+        grid-template-columns: 1fr;
+        /* 1 category per row on small screens */
     }
 }
 
@@ -389,11 +415,11 @@ section{
 
 
 /* review section starts here */
-.review .review-slider{
+.review .review-slider {
     padding: 1rem;
 }
 
-.review .review-slider .box{
+.review .review-slider .box {
     background: #fff;
     border-radius: .5rem;
     text-align: center;
@@ -403,30 +429,30 @@ section{
     box-shadow: var(--box-shadow);
 }
 
-.review .review-slider .box:hover{
+.review .review-slider .box:hover {
     box-shadow: 1px 1px 10px 4px var(--green);
 }
 
-.review .review-slider .box img{
+.review .review-slider .box img {
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
 }
 
-.review .review-slider .box p{
+.review .review-slider .box p {
     padding: 1rem 0;
     line-height: 1.5;
     color: var(--light-color);
     font-size: 1.5rem;
 }
 
-.review .review-slider .box h3{
+.review .review-slider .box h3 {
     padding-bottom: .5rem;
     color: var(--black);
     font-size: 2.2rem;
 }
 
-.review .review-slider .box .stars i{
+.review .review-slider .box .stars i {
     color: orange;
     font-size: 1.7rem;
 }
@@ -434,49 +460,50 @@ section{
 
 /* footer starts here */
 
-.footer{
+.footer {
     background: #fff;
 }
-.footer .box-container{
+
+.footer .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     gap: 1.5rem;
 }
 
-.footer .box-container .box h3{
+.footer .box-container .box h3 {
     font-size: 2.5rem;
     color: var(--black);
     padding: 1rem 0;
 }
 
-.footer .box-container .box h3 i{
+.footer .box-container .box h3 i {
     color: var(--green);
 }
 
-.footer .box-container .box .links{
+.footer .box-container .box .links {
     display: block;
     font-size: 1.5rem;
     color: var(--light-color);
     padding: 1rem 0;
 }
 
-.footer .box-container .box .links i{
+.footer .box-container .box .links i {
     color: var(--green);
     padding-right: .5rem;
 }
 
-.footer .box-container .box .links:hover i{
+.footer .box-container .box .links:hover i {
     padding-right: 1.5rem;
 }
 
-.footer .box-container .box p{
+.footer .box-container .box p {
     line-height: 1.5;
     font-size: 1.5rem;
     color: var(--light-color);
     padding: 1rem 0;
 }
 
-.footer .box-container .box .share i{
+.footer .box-container .box .share i {
     height: 4rem;
     width: 4rem;
     line-height: 4rem;
@@ -488,12 +515,12 @@ section{
     text-align: center;
 }
 
-.footer .box-container .box .share i:hover{
+.footer .box-container .box .share i:hover {
     background: var(--green);
     color: #fff;
 }
 
-.footer .box-container .box .email{
+.footer .box-container .box .email {
     width: 100%;
     margin: .7rem 0;
     padding: 1rem;
@@ -504,12 +531,12 @@ section{
     text-transform: none;
 }
 
-.footer .box-container .box .payment-img{
+.footer .box-container .box .payment-img {
     margin-top: 2rem;
     height: 3rem;
 }
 
-.footer .credit{
+.footer .credit {
     text-align: center;
     margin-top: 2rem;
     padding: 1rem;
@@ -525,26 +552,30 @@ section{
 
 /* media quary */
 
-@media(max-width: 991px){
-    html{
+@media(max-width: 991px) {
+    html {
         font-size: 55%;
     }
-    .header{
+
+    .header {
         padding: 2rem;
     }
-    section{
+
+    section {
         padding: 2rem;
     }
 }
 
-@media(max-width: 768px){
-    #menu-btn{
+@media(max-width: 768px) {
+    #menu-btn {
         display: inline-block;
     }
-    .header .search-from{
+
+    .header .search-from {
         width: 90%;
     }
-    .header .navbar{
+
+    .header .navbar {
         position: absolute;
         top: 110%;
         right: -110%;
@@ -553,25 +584,29 @@ section{
         border-radius: .5rem;
         background: #fff;
     }
-    .header .navbar.active{
+
+    .header .navbar.active {
         right: 2rem;
         transition: .4s linear;
     }
-    .header .navbar a{
+
+    .header .navbar a {
         display: block;
-        
+
         margin: 2rem 2.5rem;
     }
 }
 
-@media(max-width: 450px){
-    html{
+@media(max-width: 450px) {
+    html {
         font-size: 50%;
     }
-    .heading{
+
+    .heading {
         font-size: 2.5rem;
     }
-    .footer{
+
+    .footer {
         text-align: center;
     }
 }
